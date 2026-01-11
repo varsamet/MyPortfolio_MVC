@@ -15,5 +15,19 @@ namespace MyPortfolio_MVC.Controllers
             var values = db.TblProjects.ToList();
             return View(values);
         }
+
+        [HttpGet]
+        public ActionResult CreateProject()
+        {
+            var categoriList = db.TblCategories.ToList();
+            List<SelectListItem> categories = (from x in categoriList
+                                               select new SelectListItem
+                                               {
+                                                   Text = x.Name,
+                                                   Value = x.CategoryId.ToString()
+                                               }).ToList();
+            ViewBag.categories = categories;
+            return View();
+        }
     }
 }

@@ -14,8 +14,8 @@ namespace MyPortfolio_MVC.Controllers
        MyPortfolioNet1Entities2 db = new MyPortfolioNet1Entities2();
         public ActionResult Index()
         {
-            var values = db.TblCategories.ToList();
-            return View(values);
+            var value = db.TblCategories.ToList();
+            return View(value);
         }
 
         [HttpGet]
@@ -28,6 +28,32 @@ namespace MyPortfolio_MVC.Controllers
         public ActionResult CreateCategory(TblCategory category)
         {
             db.TblCategories.Add(category);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        public ActionResult DeleteCategory(int id)
+        {
+            var value = db.TblCategories.Find(id);
+            db.TblCategories.Remove(value);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+
+        [HttpGet]
+        public ActionResult UpdateCategory(int id)
+        {
+            var value = db.TblCategories.Find(id);
+            return View(value);
+        }
+
+
+        [HttpPost]
+        public ActionResult UpdateCategory(TblCategory model)
+        {
+            var value = db.TblCategories.Find(model.CategoryId);
+            value.Name = model.Name;
             db.SaveChanges();
             return RedirectToAction("Index");
         }

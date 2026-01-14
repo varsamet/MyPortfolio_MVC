@@ -19,5 +19,13 @@ namespace MyPortfolio_MVC.Controllers
             var values = db.TblEducations.ToList();
             return View(values);
         }
+
+        public ActionResult DeleteEducation(int id)
+        {
+            var value = db.TblEducations.Find(id);
+            db.TblEducations.Remove(value);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

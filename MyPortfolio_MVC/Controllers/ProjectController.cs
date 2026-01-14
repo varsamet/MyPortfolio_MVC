@@ -65,7 +65,7 @@ namespace MyPortfolio_MVC.Controllers
         [HttpGet]
         public ActionResult UpdateProject(int id)
         {
-
+            CategoriDropdown();
             var value =db.TblProjects.Find(id);
             return View(value);
         }

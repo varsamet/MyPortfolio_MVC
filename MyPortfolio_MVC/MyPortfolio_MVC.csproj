@@ -572,6 +572,8 @@
     <Content Include="Views\Education\UpdateEducation.cshtml" />
     <Content Include="Views\Default\Index.cshtml" />
     <Content Include="Templates\luther\site.webmanifest" />
+    <Content Include="Views\Default\DefaultBanner.cshtml" />
+    <Content Include="Views\Default\DefaultExpertise.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

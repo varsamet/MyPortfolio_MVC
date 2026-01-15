@@ -30,9 +30,10 @@
             <th>@count</th>
             <td>@item.SchollName</td>
             <td>@item.Department</td>
-            <td>@item.StartDate.Value.ToShortDateString()</td>
+            <td>@item.StartDate.ToShortDateString()</td>
             <td>@(String.IsNullOrEmpty(item.EndDate?.ToString()) ? "Devam Ediyor" : item.EndDate?.ToShortDateString()) </td>
-            <td>@item.EndDate.Value.ToShortDateString()</td>
+            <td>@item.Description</td>
+
             <td>
                 @if (item.EndDate == null)
                 {
@@ -59,8 +60,3 @@
 
 <br />
 <br />
-
-<div class="alert alert-warning text-center">
-    <i class="fa fa-info-circle"></i>
-    Eğitim bilgisi bulunamadı.
-</div>

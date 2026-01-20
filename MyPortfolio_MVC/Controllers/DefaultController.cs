@@ -29,6 +29,11 @@ namespace MyPortfolio_MVC.Controllers
             return PartialView(values);
         }
 
+        public PartialViewResult DefaultExperience()
+        {
+            var values = db.TblExperiences.ToList();
+            return PartialView(values);
+        }
 
     }
 }

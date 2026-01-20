@@ -37,5 +37,6 @@ namespace MyPortfolio_MVC.Models
         public DbSet<TblProject> TblProjects { get; set; }
         public DbSet<TblSocialMedia> TblSocialMedias { get; set; }
         public DbSet<TblTestimonial> TblTestimonials { get; set; }
+        public DbSet<TblAdmin> TblAdmins { get; set; }
     }
 }

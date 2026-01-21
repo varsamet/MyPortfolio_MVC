@@ -8,6 +8,7 @@ using System.Web.Mvc;
 
 namespace MyPortfolio_MVC.Controllers
 {
+    [AllowAnonymous]
     public class DefaultController : Controller
     {
         MyPortfolioNet1Entities2 db = new MyPortfolioNet1Entities2();

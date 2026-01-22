@@ -377,6 +377,7 @@
     <Content Include="Templates\luther\js\plugins.js" />
     <Content Include="Templates\luther\readme.txt" />
     <Content Include="Templates\luther\styles.html" />
+    <Content Include="todolist.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -585,6 +586,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />

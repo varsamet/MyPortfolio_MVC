@@ -11,8 +11,10 @@
         <label>Profil Resmi</label>
         <img src="@Model.ImageUrl" style="width:75px;height:100px;" alt="Profil Resmi" />
     </div>
+    <br /><br />
     <label>Profil Resmini Yükleyin</label>
     <input type="file" name="ImageFile" value=""/>
+    <br />
     <label>Ad</label>
     <input type="text" name="Name" class="form-control" value="@Model.Name" />
     <br />
@@ -24,6 +26,9 @@
     <br />
     <label>Şifreyi Girin</label>
     <input type="password" name="password" class="form-control" />
+    <br />
+    <p style="color:red">@Html.ValidationSummary()</p>
+    <br />
     <button class="btn btn btn-outline-primary">Bilgileri Güncelle</button>
 </form>
 

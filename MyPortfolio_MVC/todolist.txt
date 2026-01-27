@@ -1,5 +1,4 @@
 ﻿Mesaj Gönderme işlemleri
-Ana sayfada Projelerim kısmı
 Profile/Index içinde şifre güncelleme kısmı eklenecek
 Session değeri gelmezse Login/Indexe atsın
 

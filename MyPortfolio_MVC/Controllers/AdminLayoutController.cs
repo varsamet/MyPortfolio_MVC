@@ -28,17 +28,24 @@ namespace MyPortfolio_MVC.Controllers
 
         public PartialViewResult AdminLayoutSidebar()
         {
+            if (Session["email"] == null)
+            {
+                return PartialView(); // ya da Redirect
+            }
 
             var email = Session["email"].ToString();
             var admin = db.TblAdmins.FirstOrDefault(x => x.Email == email);
 
-            ViewBag.nameSurname = admin.Name + " " + admin.Surname;
-            ViewBag.image = admin.ImageUrl;
-            return PartialView();
+            return PartialView(admin);
         }
 
         public PartialViewResult AdminLayoutNavbar()
         {
+
+            if (Session["email"] == null)
+            {
+                return PartialView(); // ya da Redirect
+            }
             var email = Session["email"].ToString();
             var admin = db.TblAdmins.FirstOrDefault(x => x.Email == email);
 
